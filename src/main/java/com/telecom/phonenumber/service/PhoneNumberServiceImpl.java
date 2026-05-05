@@ -1,5 +1,6 @@
 package com.telecom.phonenumber.service;
 
+import com.telecom.phonenumber.exception.PhoneNumberNotFoundException;
 import com.telecom.phonenumber.model.PhoneNumber;
 import com.telecom.phonenumber.model.PhoneNumberStatus;
 import com.telecom.phonenumber.repository.PhoneNumberRepository;
@@ -29,7 +30,7 @@ public class PhoneNumberServiceImpl implements PhoneNumberService{
     @Override
     public PhoneNumber activatePhoneNumber(String number) {
         PhoneNumber phone = repository.findByNumber(number)
-                .orElseThrow(() -> new RuntimeException("Phone number not found"));
+                .orElseThrow(() -> new PhoneNumberNotFoundException("Phone number not found: "+number));
 
         if (phone.getStatus() != PhoneNumberStatus.ACTIVE) {
             phone.setStatus(PhoneNumberStatus.ACTIVE);
