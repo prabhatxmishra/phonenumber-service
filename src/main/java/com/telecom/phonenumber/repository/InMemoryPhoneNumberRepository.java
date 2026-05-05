@@ -4,12 +4,10 @@ import com.telecom.phonenumber.model.PhoneNumber;
 import com.telecom.phonenumber.model.PhoneNumberStatus;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 
 @Repository
 public class InMemoryPhoneNumberRepository implements PhoneNumberRepository {
