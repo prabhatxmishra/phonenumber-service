@@ -44,9 +44,24 @@ GET /api/phone-numbers
 ```json
 [
   {
+    "number": "6308876116",
+    "customerId": "C002",
+    "status": "INACTIVE"
+  },
+  {
     "number": "9455773745",
     "customerId": "C001",
     "status": "ACTIVE"
+  },
+  {
+    "number": "9451279394",
+    "customerId": "C002",
+    "status": "ACTIVE"
+  },
+  {
+    "number": "8736567678",
+    "customerId": "C003",
+    "status": "INACTIVE"
   },
   {
     "number": "9453987987",
@@ -75,24 +90,9 @@ GET /api/customers/C001/phone-numbers
 ```json
 [
   {
-    "number": "6308876116",
-    "customerId": "C002",
-    "status": "INACTIVE"
-  },
-  {
     "number": "9455773745",
     "customerId": "C001",
     "status": "ACTIVE"
-  },
-  {
-    "number": "9451279394",
-    "customerId": "C002",
-    "status": "ACTIVE"
-  },
-  {
-    "number": "8736567678",
-    "customerId": "C003",
-    "status": "INACTIVE"
   },
   {
     "number": "9453987987",
@@ -100,6 +100,7 @@ GET /api/customers/C001/phone-numbers
     "status": "INACTIVE"
   }
 ]
+
 ```
 
 **If customer does not exist:**
